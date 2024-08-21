@@ -59,10 +59,7 @@ CC-By Attribution 4.0 International
 
 ## Training
 ### Weights & Biases (WandB)
-To monitor the training process and track various metrics, I used **Weights & Biases (WandB)**. This tool provides a comprehensive dashboard for visualizing training progress, comparing runs, and sharing results. By integrating WandB, I was able to keep a close eye on key metrics such as loss, accuracy, precision, recall, and F1 scores.
-
-### Monitoring Metrics
-Metrics were monitored using WandB, which allowed for real-time tracking and visualization. This helped in identifying any issues early on and making necessary adjustments to the training process.
+To monitor the training process and track various metrics, I used **Weights & Biases (WandB)**. This tool provides a comprehensive dashboard for visualizing training progress, comparing runs, and sharing results. By integrating WandB, I was able to keep a close eye on key metrics such as loss, accuracy, precision, recall, and F1 scores. This helped in identifying any issues early on and making necessary adjustments to the training process.
 
 ### Batch Size
 The batch size used for training was **128**. This size was chosen to balance between computational efficiency and model performance.
@@ -110,7 +107,7 @@ To address overfitting, I implemented several techniques:
 By implementing these strategies, I was able to mitigate overfitting and improve the model’s performance on the test data.
 
 ## Results
-### Confusion maMtrix
+### Confusion Matrix
 The confusion matrix provides a detailed breakdown of the model’s performance on the test set at epoch 5:
 
 <img width="143" alt="image" src="https://github.com/user-attachments/assets/5842292c-d317-4583-afba-66a5841bcb79">
@@ -122,12 +119,20 @@ The evaluation loss, as tracked by WandB, shows a consistent decrease over the t
 
 ### Classification Report
 The classification report provides a comprehensive overview of the model’s performance across various metrics. Here are the results from the final epoch of training:
-
 - Epoch: 9
 - Training Loss: 0.434900
 - Validation Loss: 0.308287
-- Accuracy: 0.84
+
+**Precision:**
+- Class 0 (Normal): 0.89
+- Class 1 (Polyp): 0.81
+
+**Recall:**
+- Class 0 (Normal): 0.72
+- Class 1 (Polyp): 0.93
   
 **F1-Score:**
 - Class 0 (Normal): 0.80
 - Class 1 (Polyp): 0.86
+
+**Accuracy: 0.84**
