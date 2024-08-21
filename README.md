@@ -136,3 +136,14 @@ The classification report provides a comprehensive overview of the model’s per
 **F1-Score:**
 - Class 0 (Normal): 0.80
 - Class 1 (Polyp): 0.86
+
+## References:
+- https://eurekamag.com/research/068/896/068896224.php
+- https://newsnetwork.mayoclinic.org/discussion/ai-reduces-miss-rate-of-precancerous-polyps-in-colorectal-cancer-screening/
+- https://www.mayoclinic.org/medical-professionals/digestive-diseases/news/role-of-ai-in-detection-and-management-of-colorectal-polyps-and-cancer/mac-20479605
+- https://www.merriam-webster.com/dictionary/polyp
+- https://www.mayoclinic.org/tests-procedures/colonoscopy/about/pac-20393569
+- https://www.medtronic.com/covidien/en-us/products/gastrointestinal-artificial-intelligence/gi-genius-intelligent-endoscopy.html
+- https://pubmed.ncbi.nlm.nih.gov/31525512/
+- https://github.com/DebeshJha/GastroVision
+- https://github.com/google-research/vision_transformer
