@@ -7,14 +7,14 @@ A polyp is an abnormal growth of tissue projecting from a mucous membrane. In th
 A colonoscopy is a medical procedure used to examine the interior of the colon and rectum. During the procedure, a long, flexible tube with a camera (colonoscope) is inserted through the rectum to allow the doctor to view the entire colon. This procedure is essential for detecting polyps, cancers, and other abnormalities.
 
 ### Statistics of Missed Polyps
-Colonoscopy is great when it comes to colorectal cancer screening, yet it is not perfect. Studies have shown that **22% to 28%** of polyps and **20% to 24%** of adenomas are missed during colonoscopies. This high miss rate can lead to the development of interval cancers, which are cancers that occur between regular screenings. The integration of AI in colonoscopy procedures has shown promise in reducing these miss rates. For instance, AI-assisted colonoscopies have demonstrated a significant reduction in the miss rate of precancerous polyps, from 32.4% to 15.5%.
+Colonoscopy is great when it comes to colorectal cancer screening, yet it is not perfect. Studies have shown that **22% to 28%** of polyps and **20% to 24%** of adenomas are missed during colonoscopies. This high miss rate can lead to the development of interval cancers, which are cancers that occur between regular screenings. The integration of AI in colonoscopy procedures has shown promise in reducing these miss rates. For instance, AI-assisted colonoscopies have demonstrated a significant reduction in the miss rate of precancerous polyps, from **32.4% to 15.5%**.
 
 ### How AI Can Solve the Problem
 Artificial Intelligence (AI) can enhance the detection of polyps during colonoscopies by using deep learning algorithms to analyze real-time video feeds. These AI systems can identify polyps that might be missed by the human eye, especially small or flat ones. By marking potential polyps in real-time, AI assists endoscopists in making more accurate diagnoses and decisions. This not only improves detection rates but also reduces the overall cost and time of the procedure.
 
 ## Other Solutions Out There
 ### Existing AI Tools for Polyp Detection
-There are several commercial products available that utilize AI for polyp detection. One notable example is the GI Genius™ Intelligent Endoscopy Module by Medtronic. This system uses AI to assist endoscopists by highlighting potential polyps in real-time during colonoscopies. Studies have shown that the GI Genius™ module can increase adenoma detection rates by up to 14.4%. Another example is the EndoBRAIN® by Cybernet Systems, which also uses AI to improve the detection and characterization of polyps during endoscopic procedures.
+There are several commercial products available that utilize AI for polyp detection. One notable example is the **GI Genius™** Intelligent Endoscopy Module by Medtronic. This system uses AI to assist endoscopists by highlighting potential polyps in real-time during colonoscopies. Studies have shown that the GI Genius™ module can increase adenoma detection rates by up to **14.4%**. Another example is the **EndoBRAIN®** by Cybernet Systems, which also uses AI to improve the detection and characterization of polyps during endoscopic procedures.
 
 ## Model
 ### Technologies Used
@@ -35,13 +35,14 @@ The model architecture is designed to leverage the strengths of both ViT and DIN
   
 - **Classifier:** A linear layer that maps the embeddings to the output classes (polyp or no polyp).
   
-- **Loss Function:** CrossEntropyLoss is used with class weights to handle class imbalance. The class weights were calculated based on the frequency of each class in the dataset. For example, if the dataset has significantly more images without polyps than with polyps, the weight for the polyp class is increased to ensure the model pays more attention to detecting polyps. In this case, the weights were set as [0.5788, 3.6725], reflecting the imbalance in the dataset.
+- **Loss Function:** **CrossEntropyLoss** is used with class weights to handle class imbalance. The class weights were calculated based on the frequency of each class in the dataset. For example, if the dataset has significantly more images without polyps than with polyps, the weight for the polyp class is increased to ensure the model pays more attention to detecting polyps. In this case, the weights were set as **[0.5788, 3.6725]**, reflecting the imbalance in the dataset.
 
 ## Data
 ### Dataset: GastroVision
-For this project, I used the **GastroVision** dataset, which contains a comprehensive collection of colonoscopy images. GastroVision, with two broad categories (upper GI and lower GI), covers 36 classes belonging to anatomical landmarks or pathological findings. Proper categorization of these classes can be visualized from the diagram given below.
+For this project, I used the **GastroVision** dataset, which contains a comprehensive collection of colonoscopy images. GastroVision, with two broad categories (upper GI and lower GI), covers **36 classes** belonging to anatomical landmarks or pathological findings. Proper categorization of these classes can be visualized from the diagram given below.
 
 ![gastrovision5](https://github.com/user-attachments/assets/8ebf0a84-bae3-40b9-89fe-33e8e982fa44)
+<img src="(https://github.com/user-attachments/assets/8ebf0a84-bae3-40b9-89fe-33e8e982fa44)" width="48">
 
 ### Data Splitting
 To prepare the data for training and testing, I created two folders: one containing images with polyps and the other containing regular colonoscopy images. The data was then split into training and testing sets using the following code:
