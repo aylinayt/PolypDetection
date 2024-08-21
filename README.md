@@ -41,7 +41,7 @@ The model architecture is designed to leverage the strengths of both ViT and DIN
 ### Dataset: GastroVision
 For this project, I used the **GastroVision** dataset, which contains a comprehensive collection of colonoscopy images. GastroVision, with two broad categories (upper GI and lower GI), covers **36 classes** belonging to anatomical landmarks or pathological findings. Proper categorization of these classes can be visualized from the diagram given below.
 
-<img src="(https://github.com/user-attachments/assets/8ebf0a84-bae3-40b9-89fe-33e8e982fa44)" width="100" height="100"/>
+<img src="(https://github.com/user-attachments/assets/8ebf0a84-bae3-40b9-89fe-33e8e982fa44)" width="100" height="600"/>
 
 
 ### Data Splitting
