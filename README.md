@@ -52,6 +52,7 @@ To prepare the data for training and testing, I created two folders: one contain
 
 - Training Data: 734 images
 - Testing Data: 147 images
+
 This split corresponds to approximately 83.3% of the data for training and 16.7% for testing.
 
 ### Licence 
