@@ -25,7 +25,7 @@ To develop the polyp detection tool, I utilized several advanced machine learnin
 - **DINO (Self-Distillation with No Labels):** A self-supervised learning method that enhances the performance of the Vision Transformer.
 
 ### Model Architecture and Explanation
-The model architecture is designed to leverage the strengths of both ViT and DINO. The spatial encoder used in this model has pretrained weights from the team I did my internship with, which were frozen during training to retain their learned features.
+The model architecture is designed to leverage the strengths of both **ViT and DINO**. The spatial encoder used in this model has **pretrained weights** from the team I did my internship with, which were frozen during training to retain their learned features.
 ![image](https://github.com/user-attachments/assets/40dc672f-cfd1-44a7-a27a-2774a067e18f)
 
 
@@ -68,7 +68,7 @@ Metrics were monitored using WandB, which allowed for real-time tracking and vis
 The batch size used for training was **128**. This size was chosen to balance between computational efficiency and model performance.
 
 ### HuggingFace Trainer
-I used the HuggingFace Trainer for training the model. The Trainer class simplifies the training loop and provides built-in support for various features such as learning rate scheduling, mixed precision training, and early stopping.
+I used the **HuggingFace Trainer** for training the model. The Trainer class simplifies the training loop and provides built-in support for various features such as learning rate scheduling, mixed precision training, and early stopping.
 
 ### Learning Rate Scheduler
 A learning rate scheduler was used to adjust the learning rate during training. Specifically, I used a **cosine learning rate scheduler**. This type of scheduler gradually decreases the learning rate following a cosine curve, which helps in fine-tuning the model and avoiding overshooting the optimal point.
