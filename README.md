@@ -55,12 +55,12 @@ To prepare the data for training and testing, I created two folders: one contain
 
 This split corresponds to approximately 83.3% of the data for training and 16.7% for testing.
 
-### Licence 
+### License 
 CC-By Attribution 4.0 International
 
 ## Training
 ### Weights & Biases (WandB)
-To monitor the training process and track various metrics, I used **Weights & Biases (WandB)**. This tool provides a comprehensive dashboard for visualizing training progress, comparing runs, and sharing results. By integrating WandB, I was able to keep a close eye on key metrics such as loss, accuracy, precision, recall, and F1 scores. This helped in identifying any issues early on and making necessary adjustments to the training process.
+To monitor the training process and track various metrics, I used **Weights & Biases (WandB)**. This tool provides a comprehensive dashboard for visualizing training progress, comparing runs, and sharing results. By integrating WandB, I was able to keep a close eye on key metrics such as **loss, accuracy, precision, recall, and F1 scores**. This helped in identifying any issues early on and making necessary adjustments to the training process.
 
 ### Batch Size
 The batch size used for training was **128**. This size was chosen to balance between computational efficiency and model performance.
