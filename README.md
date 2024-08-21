@@ -125,31 +125,8 @@ The classification report provides a comprehensive overview of the model’s per
 - Epoch: 9
 - Training Loss: 0.434900
 - Validation Loss: 0.308287
+- Accuracy: 0.84
   
-**Classification Metrics
-Precision:**
-- Class 0 (Normal): 0.89
-- Class 1 (Polyp): 0.81
-  
-**Recall:**
-- Class 0 (Normal): 0.72
-- Class 1 (Polyp): 0.93
-
 **F1-Score:**
 - Class 0 (Normal): 0.80
 - Class 1 (Polyp): 0.86
-  
-**Support:**
-- Class 0 (Normal): 65
-- Class 1 (Polyp): 82
-- Accuracy: 0.84
-  
-**Macro Average:**
-- Precision: 0.85
-- Recall: 0.82
-- F1-Score: 0.83
-  
-**Weighted Average:**
-- Precision: 0.84
-- Recall: 0.84
-- F1-Score: 0.83
