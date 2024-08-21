@@ -76,49 +76,47 @@ A learning rate scheduler was used to adjust the learning rate during training. 
 ### Training Metrics
 Here are the training metrics and metrics used:
 
-Batch Size: 128
-Learning Rate: 0.0002
-Weight Decay: 0.002
-Number of Epochs: 10
-Evaluation Strategy: Epoch
-Logging Steps: 10
-Mixed Precision Training: Enabled (fp16)
-Learning Rate Scheduler: Cosine
-Warmup Steps: 500
-Gradient Accumulation Steps: 2
-Early Stopping: Enabled (patience of 3 epochs)
+- Batch Size: 128
+- Learning Rate: 0.0002
+- Weight Decay: 0.002
+- Number of Epochs: 10
+- Evaluation Strategy: Epoch
+- Logging Steps: 10
+- Mixed Precision Training: Enabled (fp16)
+- Learning Rate Scheduler: Cosine
+- Warmup Steps: 500
+- Gradient Accumulation Steps: 2
+- Early Stopping: Enabled (patience of 3 epochs)
 
 By using these settings and tools, I aimed to ensure a robust and efficient training process, leading to a well-performing model for polyp detection.
 
-# other solutions out there
-- if this has been done before
-- commercial products that are out there
-- I wanted to see if i can create a tool like that by myself w the knowledge i have in ml
+## Results
+### Confusion maMtrix
+The confusion matrix provides a detailed breakdown of the model’s performance on the test set at epoch 5:
+<img width="143" alt="image" src="https://github.com/user-attachments/assets/5842292c-d317-4583-afba-66a5841bcb79">
 
-# model
-- technologies that i used
-- model architecture and explanation
-- cite vit and dino, implemented these 2 architectures
-- spatial encoder had pretrained weights from GI team, that was frozen
+### Evaluation Loss
+The evaluation loss, as tracked by WandB, shows a consistent decrease over the training epochs, indicating that the model is learning effectively and improving its performance. Below is the graph of the evaluation loss:
+<img width="284" alt="image" src="https://github.com/user-attachments/assets/4785f8d8-c0ec-4aff-a81e-46e2eae604d8">
 
-# data
-- dataset: GastroVision
-- how I split train and test
-- give percentages for training and testing
-- add the license
+### Classification Report
+The classification report, generated using sklearn, provides a comprehensive overview of the model’s performance across various metrics:
 
-# training
-- talk about wandb
-- how i monitored metrics
-- give the batch size
-- talk about huggingface trainer: why use lr_scheduler
-- learning rate, the other training metrics
+## Challenges and Solutions
+### Overfitting
+One of the primary challenges I faced during the development of the model was overfitting. Overfitting occurs when the model learns the training data too well, including its noise and outliers, which negatively impacts its performance on new, unseen data.
 
-# results
-- confusion matrix
-- eval_loss
-- classification report, sklearn
+### Solutions Implemented
+To address overfitting, I implemented several techniques:
+- Weighted Loss: Given the class imbalance in the dataset, I used a weighted loss function. By assigning higher weights to the minority class (polyp images), the model was encouraged to pay more attention to detecting polyps, which helped in balancing the learning process.
+- Dropout: I added dropout layers with rates of **0.5 and 0.7** to the model to randomly set a fraction of input units to zero during training. This helps prevent the model from becoming too reliant on specific neurons, thereby improving its generalization ability.
+- Freezing the Weights: The pretrained weights of the encoder were frozen to retain their learned features and prevent overfitting.
+- Increase the Batch Size: Increasing the batch size helped in stabilizing the training process and improving the model’s performance.
+- Increase the Learning Rate: Adjusting the learning rate helped in speeding up the convergence of the model.
+- Added Data to Training: Adding more data to the training set improved the model’s ability to generalize to new, unseen data.
+- Learning Rate Scheduler: Initially, a linear learning rate scheduler was used, which was later changed to a cosine scheduler to better adjust the learning rate during training.
+- Increased Weight Decay: The weight decay was increased to 0.002 to regularize the model and prevent overfitting.
+- Early Stopping Callback: An early stopping callback was added to stop training when the model’s performance stopped improving, preventing overfitting.
+- Gradient Accumulation: Gradient accumulation was used to effectively increase the batch size without requiring more memory, which helped in stabilizing the training process.
 
-# Problems I overcame
-- overfitting
-- dropout, weigthed loss, fine tuning that I did
+By implementing these strategies, I was able to mitigate overfitting and improve the model’s performance on the test data.
