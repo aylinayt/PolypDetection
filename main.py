@@ -168,8 +168,8 @@ def compute_metrics(p):
     }
 
 training_args = TrainingArguments(
-    per_device_train_batch_size=4,
-    per_device_eval_batch_size=4,
+    per_device_train_batch_size=128,
+    per_device_eval_batch_size=128,
     num_train_epochs=10,
     learning_rate=0.0002,
     weight_decay=0.002, #increased from 0.001
